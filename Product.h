@@ -5,8 +5,14 @@
 #include <ostream>
 #include <string>
 
+
 /**
+ * @author Justin Saunders
+ * This class takes the 2 strings and builds them into a product. 
+ * Friend operators are used for printing and comparing the products or items
  */
+
+
 class Product {
 private:
     std::uint64_t UPC;
@@ -23,7 +29,7 @@ public:
     }
 
     Product(std::uint64_t upc)
-        : Product(upc, "") {
+        : Product(upc, "") { //description can be anything as a default
     }
 
     friend std::ostream& operator<<(std::ostream& os, Product const& item){
